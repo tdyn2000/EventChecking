@@ -35,7 +35,7 @@
     if(buttonIndex==1){
         //        [self.navigationController popToRootViewControllerAnimated:YES];
         [[Manager getInstance]clearSetting];
-        [self performSegueWithIdentifier:@"BackToHomeView" sender:nil];
+        [self.navigationController performSegueWithIdentifier:@"BackToHomeView" sender:self];
     }
 }
 

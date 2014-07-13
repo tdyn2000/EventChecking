@@ -42,10 +42,7 @@
     [self Login];
 }
 
--(void)Login{
-    //    tfUsername.text = @"demo";
-    //    tfPassword.text = @"demo";
-    
+-(void)Login{   
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     
@@ -59,7 +56,7 @@
     lbError.text = @"";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"username": tfUsername.text,@"password":tfPassword.text};
-    [manager POST:loginUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:loginUrl parameters:parameters timeoutInterval:10.0 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         Manager *mg = [Manager getInstance];
         mg.userid = [responseObject objectForKey:k_id];

@@ -57,9 +57,7 @@
      didReadSymbols: (ZBarSymbolSet*) syms
           fromImage: (UIImage*) img
 {
-    // do something useful with results
     for(ZBarSymbol *sym in syms) {
-        NSLog(@"%@",sym.data);
         [self postEventCode:sym.data];
         break;
     }
@@ -72,10 +70,9 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
     NSDictionary *parameters = @{k_access_token:mg.access_token ,k_code:code};
     
-    [manager POST:scanUrl parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:scanUrl parameters:parameters timeoutInterval:10.0 success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self presentViewController:infoView animated:YES completion:nil];
         [self hideLoading];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

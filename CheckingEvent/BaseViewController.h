@@ -10,6 +10,7 @@
 #import "Manager.h"
 #import "AppDefine.h"
 #import "MBProgressHUD.h"
+#import "AFHTTPRequestOperationManager+Timeout.h"
 
 @interface BaseViewController : UIViewController
 {

@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="267" y="93"/>
+            <point key="canvasLocation" x="195" y="93"/>
         </scene>
         <!--Scan View Controller - Scan-->
         <scene sceneID="4oe-9W-eug">
@@ -287,12 +287,11 @@
                     <connections>
                         <outlet property="lbUsername" destination="9yo-ug-GQT" id="lxc-tW-VVW"/>
                         <outlet property="topConstraint" destination="EJJ-At-sTX" id="TgM-rP-ysn"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="BackToHomeView" modalTransitionStyle="crossDissolve" id="qnp-1k-78I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYl-e9-fdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="981"/>
+            <point key="canvasLocation" x="1115" y="783"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="7QB-6V-qvg">
@@ -467,6 +466,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="PWa-PY-ue6" kind="relationship" relationship="rootViewController" id="EEe-BT-aRC"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="BackToHomeView" modalTransitionStyle="crossDissolve" id="pdQ-SG-LVn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aku-3F-5RM" userLabel="First Responder" sceneMemberID="firstResponder"/>

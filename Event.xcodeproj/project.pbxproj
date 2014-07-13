@@ -64,6 +64,7 @@
 		84DFC2B11971A33000E9BF0D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFC2B01971A33000E9BF0D /* CoreVideo.framework */; };
 		84DFC2B31971A33D00E9BF0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFC2B21971A33D00E9BF0D /* QuartzCore.framework */; };
 		84DFC2B51971A34C00E9BF0D /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFC2B41971A34C00E9BF0D /* libiconv.dylib */; };
+		84F7578D1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7578B1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,8 @@
 		84DFC2B01971A33000E9BF0D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		84DFC2B21971A33D00E9BF0D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		84DFC2B41971A34C00E9BF0D /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		84F7578A1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+timeout.h"; sourceTree = "<group>"; };
+		84F7578B1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+timeout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +417,8 @@
 		847FB668197055340035665D /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				84F7578A1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.h */,
+				84F7578B1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.m */,
 				847FB669197055340035665D /* AFHTTPRequestOperation.h */,
 				847FB66A197055340035665D /* AFHTTPRequestOperation.m */,
 				847FB66B197055340035665D /* AFHTTPRequestOperationManager.h */,
@@ -573,6 +578,7 @@
 				847FB68E197055340035665D /* AFHTTPRequestOperation.m in Sources */,
 				847FB69B197055340035665D /* UIImageView+AFNetworking.m in Sources */,
 				847FB5D5197049EF0035665D /* StartViewController.m in Sources */,
+				84F7578D1972C8DE00488EC7 /* AFHTTPRequestOperationManager+timeout.m in Sources */,
 				847FB68F197055340035665D /* AFHTTPRequestOperationManager.m in Sources */,
 				841F30C41971D08100756EEB /* EnterCodeViewController.m in Sources */,
 				847FB69C197055340035665D /* UIProgressView+AFNetworking.m in Sources */,
