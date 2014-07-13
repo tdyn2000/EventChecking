@@ -56,9 +56,6 @@
 }
 
 -(void)Login{
-    tfUsername.text = @"demo";
-    tfPassword.text = @"demo";
-    
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     

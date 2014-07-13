@@ -136,7 +136,7 @@
                         <outlet property="tfPassword" destination="bZw-vp-PjR" id="41b-we-1ks"/>
                         <outlet property="tfUsername" destination="Apw-lO-kFJ" id="7nD-OP-XXx"/>
                         <outlet property="topConstraint" destination="pKe-Kh-grV" id="QX7-aq-G6K"/>
-                        <segue destination="hPR-ei-zzf" kind="modal" identifier="ScanView" modalTransitionStyle="crossDissolve" animates="NO" id="mqh-sB-5Go"/>
+                        <segue destination="hPR-ei-zzf" kind="modal" identifier="ScanView" animates="NO" id="mqh-sB-5Go"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
