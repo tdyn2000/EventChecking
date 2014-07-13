@@ -30,15 +30,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    tfUsername.text = @"";
-    tfPassword.text = @"";
-    lbError.text = @"";
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     tfUsername.text = @"";
     tfPassword.text = @"";
     lbError.text = @"";
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    Manager *mg = [Manager getInstance];
+    if([mg loadSetting]){
+        [self performSegueWithIdentifier: @"ScanView" sender: self];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +55,10 @@
     [self Login];
 }
 
--(void)Login{    
+-(void)Login{
+    tfUsername.text = @"demo";
+    tfPassword.text = @"demo";
+    
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     

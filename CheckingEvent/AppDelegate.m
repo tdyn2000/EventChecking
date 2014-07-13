@@ -15,15 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ZBarReaderView class];
-    
-    Manager *mg = [Manager getInstance];
-    if([mg loadSetting]){
-        UIStoryboard *storyboard = self.window.rootViewController.storyboard;
-        UIViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"rootNavigationController"];
-        self.window.rootViewController = rootViewController;
-        [self.window makeKeyAndVisible];
-    }
-    
     return YES;
 }
 
