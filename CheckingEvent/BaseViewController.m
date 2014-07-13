@@ -58,19 +58,19 @@
 }
 
 - (void)showLoading {
-    if(HUD == nil){
-        HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        HUD.mode = MBProgressHUDAnimationFade;
-        HUD.labelText = @"Loading";
+    if(hud == nil){
+        hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDAnimationFade;
+        hud.labelText = @"Loading";
     }
     else{
-        [HUD setHidden:NO];
+        [hud setHidden:NO];
     }
 }
 
 - (void)hideLoading {
-    if(HUD != nil){
-        [HUD setHidden:YES];
+    if(hud != nil){
+        [hud setHidden:YES];
     }
 }
 

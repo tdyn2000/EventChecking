@@ -14,15 +14,18 @@
 @end
 
 @implementation InfoViewController
-@synthesize data;
+@synthesize dicData;
+@synthesize lbInfo;
+@synthesize lbMessage;
+@synthesize imgvInfo;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(data!=nil){
-        _lbInfo.text = msg_invalid;
-        _lbMessage.text = [data objectForKey:k_message];
-        _imgvInfo.image = [UIImage imageNamed:@"invalid.png"];
+    if(dicData!=nil){
+        lbInfo.text = msg_invalid;
+        lbMessage.text = [dicData objectForKey:k_message];
+        imgvInfo.image = [UIImage imageNamed:@"invalid.png"];
         self.view.backgroundColor = [UIColor redColor];
     }
 }

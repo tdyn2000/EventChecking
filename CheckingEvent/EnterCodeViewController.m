@@ -17,6 +17,7 @@
 
 @implementation EnterCodeViewController
 @synthesize tfCode;
+@synthesize lbError;
 
 - (void)viewDidLoad
 {
@@ -39,11 +40,11 @@
 -(IBAction)sendPress:(id)sender{
     NSString *errorMessage = [self validateData];
 	if (errorMessage) {
-		self.lbError.text = errorMessage;
+		lbError.text = errorMessage;
 		return;
 	}
     
-    self.lbError.text = @"";
+    lbError.text = @"";
     [self postEventCode:tfCode.text];
 }
 

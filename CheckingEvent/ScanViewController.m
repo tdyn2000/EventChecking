@@ -94,7 +94,7 @@
                               error:&error];
         
         if(json!=nil){
-            infoView.data = [json objectForKey:k_error];
+            infoView.dicData = [json objectForKey:k_error];
         }
         [self hideLoading];
         [self presentViewController:infoView animated:YES completion:nil];

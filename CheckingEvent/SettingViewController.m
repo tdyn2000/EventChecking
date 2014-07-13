@@ -33,9 +33,8 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
-        //        [self.navigationController popToRootViewControllerAnimated:YES];
         [[Manager getInstance]clearSetting];
-        [self.navigationController performSegueWithIdentifier:@"BackToHomeView" sender:self];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

@@ -13,7 +13,7 @@
 @property (nonatomic,retain) IBOutlet UILabel *lbInfo;
 @property (nonatomic,retain) IBOutlet UIImageView *imgvInfo;
 @property (nonatomic,retain) IBOutlet UILabel *lbMessage;
-@property (nonatomic,retain) NSDictionary *data;
+@property (nonatomic,retain) NSDictionary *dicData;
 
 -(IBAction)scanNextPress:(id)sender;
 

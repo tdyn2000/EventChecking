@@ -30,6 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    tfUsername.text = @"";
+    tfPassword.text = @"";
+    lbError.text = @"";
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    tfUsername.text = @"";
+    tfPassword.text = @"";
+    lbError.text = @"";
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +51,7 @@
     [self Login];
 }
 
--(void)Login{   
+-(void)Login{    
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
     

@@ -14,7 +14,7 @@
 
 @interface BaseViewController : UIViewController
 {
-    MBProgressHUD *HUD;
+    MBProgressHUD *hud;
 }
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topConstraint;
