@@ -66,7 +66,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="saD-MM-p0f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="jKD-k7-Zgr"/>
                                 </connections>
@@ -136,7 +136,7 @@
                         <outlet property="tfPassword" destination="bZw-vp-PjR" id="41b-we-1ks"/>
                         <outlet property="tfUsername" destination="Apw-lO-kFJ" id="7nD-OP-XXx"/>
                         <outlet property="topConstraint" destination="pKe-Kh-grV" id="QX7-aq-G6K"/>
-                        <segue destination="hPR-ei-zzf" kind="modal" identifier="ScanView" modalTransitionStyle="crossDissolve" id="mqh-sB-5Go"/>
+                        <segue destination="hPR-ei-zzf" kind="modal" identifier="ScanView" modalTransitionStyle="crossDissolve" animates="NO" id="mqh-sB-5Go"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYl-e9-fdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="1019"/>
+            <point key="canvasLocation" x="727" y="981"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="7QB-6V-qvg">
@@ -458,7 +458,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yT2-w3-CUQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPR-ei-zzf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hPR-ei-zzf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iva-mh-ugA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

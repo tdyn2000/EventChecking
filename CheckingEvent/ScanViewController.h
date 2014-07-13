@@ -14,7 +14,7 @@
 {
     ZBarReaderView *readerView;
     
-//    //Simulator
+    //Simulator
     ZBarCameraSimulator *cameraSim;
 }
 

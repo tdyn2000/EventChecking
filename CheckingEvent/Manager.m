@@ -38,4 +38,36 @@ static Manager* instance = nil;
     return(instance);
 }
 
+-(void)saveSetting{
+    NSUserDefaults *setting = [NSUserDefaults standardUserDefaults];
+    [setting setBool:YES forKey:k_login];
+    [setting setObject:userid forKey:k_id];
+    [setting setObject:username forKey:k_username];
+    [setting setObject:email forKey:k_email];
+    [setting setObject:access_token forKey:k_access_token];
+    [setting synchronize];
+}
+
+-(void)clearSetting{
+    NSUserDefaults *setting = [NSUserDefaults standardUserDefaults];
+    [setting setBool:NO forKey:k_login];
+    [setting setObject:nil forKey:k_id];
+    [setting setObject:nil forKey:k_username];
+    [setting setObject:nil forKey:k_email];
+    [setting setObject:nil forKey:k_access_token];
+    [setting synchronize];
+}
+
+-(BOOL)loadSetting{
+    NSUserDefaults *setting = [NSUserDefaults standardUserDefaults];
+    if(![setting boolForKey:k_login]){
+        return NO;
+    }
+    userid = [setting objectForKey:k_id];
+    username = [setting objectForKey:k_username];
+    email = [setting objectForKey:k_email];
+    access_token = [setting objectForKey:k_access_token];
+    return  YES;
+}
+
 @end

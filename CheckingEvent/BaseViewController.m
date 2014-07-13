@@ -25,7 +25,7 @@
             self.topConstraint.constant = self.topConstraint.constant - 20;
         }
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,9 +37,9 @@
     NSArray *subviews = [self.view subviews];
     for (id objects in subviews) {
         if ([objects isKindOfClass:[UITextField class]]) {
-            UITextField *theTextField = objects;
-            if ([objects isFirstResponder]) {
-                [theTextField resignFirstResponder];
+            UITextField *tf = objects;
+            if ([tf isFirstResponder]) {
+                [tf resignFirstResponder];
             }
         }
     }
@@ -73,16 +73,5 @@
         [HUD setHidden:YES];
     }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

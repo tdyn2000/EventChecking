@@ -30,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,8 +43,8 @@
 }
 
 -(void)Login{
-//    tfUsername.text = @"demo";
-//    tfPassword.text = @"demo";
+    //    tfUsername.text = @"demo";
+    //    tfPassword.text = @"demo";
     
     [tfUsername resignFirstResponder];
     [tfPassword resignFirstResponder];
@@ -69,6 +68,7 @@
         mg.access_token = [responseObject objectForKey:k_access_token];
         
         [self hideLoading];
+        [[Manager getInstance]saveSetting];
         [self performSegueWithIdentifier: @"ScanView" sender: self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

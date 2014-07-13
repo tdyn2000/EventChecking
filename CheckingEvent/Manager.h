@@ -21,4 +21,8 @@
 
 
 +(Manager *) getInstance;
+-(void)saveSetting;
+-(void)clearSetting;
+-(BOOL)loadSetting;
+
 @end

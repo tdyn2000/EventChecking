@@ -27,6 +27,7 @@
 #define k_username @"username"
 #define k_email @"email"
 #define k_access_token @"access_token"
+#define k_login @"login"
 
 #define k_code @"code"
 

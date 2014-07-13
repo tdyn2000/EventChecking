@@ -26,7 +26,7 @@
     [readerView willRotateToInterfaceOrientation: app.statusBarOrientation
                                         duration: 0];
     
-//    // you can use this to support the simulator
+    // you can use this to support the simulator
     if(TARGET_IPHONE_SIMULATOR) {
         cameraSim = [[ZBarCameraSimulator alloc]
                      initWithViewController: self];

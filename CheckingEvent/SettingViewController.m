@@ -25,7 +25,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(IBAction)logoutPress:(id)sender{
@@ -34,7 +33,9 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
-        [self performSegueWithIdentifier:@"BackToHomeView" sender:self];
+        //        [self.navigationController popToRootViewControllerAnimated:YES];
+        [[Manager getInstance]clearSetting];
+        [self performSegueWithIdentifier:@"BackToHomeView" sender:nil];
     }
 }
 
