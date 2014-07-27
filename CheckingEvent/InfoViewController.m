@@ -14,33 +14,26 @@
 @end
 
 @implementation InfoViewController
-@synthesize dicData;
-@synthesize lbInfo;
-@synthesize lbMessage;
-@synthesize imgvInfo;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if(dicData!=nil){
-        lbInfo.text = msg_invalid;
-        lbMessage.text = [dicData objectForKey:k_message];
-        imgvInfo.image = [UIImage imageNamed:@"invalid.png"];
-        self.view.backgroundColor = [UIColor redColor];
-    }
+//    NSString *urlRegEx =
+//    @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+//    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx];
+//    if(![urlTest evaluateWithObject:_urlLoad]){
+//        _urlLoad = [NSString stringWithFormat:@"http://%@",_urlLoad];
+//    }
+    
+    NSURL* nsUrl = [NSURL URLWithString:_urlLoad];
+    NSURLRequest* request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
+
+    [_wvContent loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
--(IBAction)scanNextPress:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

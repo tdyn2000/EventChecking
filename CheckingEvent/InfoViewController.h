@@ -10,11 +10,7 @@
 #import "BaseViewController.h"
 
 @interface InfoViewController : BaseViewController
-@property (nonatomic,retain) IBOutlet UILabel *lbInfo;
-@property (nonatomic,retain) IBOutlet UIImageView *imgvInfo;
-@property (nonatomic,retain) IBOutlet UILabel *lbMessage;
-@property (nonatomic,retain) NSDictionary *dicData;
-
--(IBAction)scanNextPress:(id)sender;
+@property (nonatomic,weak) IBOutlet UIWebView *wvContent;
+@property (nonatomic,weak) NSString *urlLoad;
 
 @end

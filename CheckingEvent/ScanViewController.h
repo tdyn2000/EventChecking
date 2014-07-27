@@ -10,15 +10,16 @@
 #import "BaseViewController.h"
 #import "ZBarSDK.h"
 
-@interface ScanViewController : BaseViewController  < ZBarReaderViewDelegate >
+@interface ScanViewController : BaseViewController  < ZBarReaderViewDelegate, MFMessageComposeViewControllerDelegate >
 {
     ZBarReaderView *readerView;
-    
+
     //Simulator
     ZBarCameraSimulator *cameraSim;
 }
 
 @property (nonatomic, retain) IBOutlet ZBarReaderView *readerView;
+@property (nonatomic, retain) NSString *codeContent;
 
 -(void)postEventCode:(NSString *)code;
 

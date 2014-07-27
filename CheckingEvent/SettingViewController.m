@@ -8,7 +8,6 @@
 
 #import "SettingViewController.h"
 #import "Manager.h"
-#import "StartViewController.h"
 
 @interface SettingViewController ()
 

@@ -11,6 +11,7 @@
 @implementation Manager
 @synthesize userid;
 @synthesize username;
+@synthesize password;
 @synthesize email;
 @synthesize access_token;
 
@@ -22,6 +23,7 @@ static Manager* instance = nil;
     {
         userid = @"";
         username = @"";
+        password = @"";
         email = @"";
         access_token = @"";
     }
@@ -43,6 +45,7 @@ static Manager* instance = nil;
     [setting setBool:YES forKey:k_login];
     [setting setObject:userid forKey:k_id];
     [setting setObject:username forKey:k_username];
+    [setting setObject:password forKey:k_password];
     [setting setObject:email forKey:k_email];
     [setting setObject:access_token forKey:k_access_token];
     [setting synchronize];
@@ -53,6 +56,7 @@ static Manager* instance = nil;
     [setting setBool:NO forKey:k_login];
     [setting setObject:nil forKey:k_id];
     [setting setObject:nil forKey:k_username];
+    [setting setObject:nil forKey:k_password];
     [setting setObject:nil forKey:k_email];
     [setting setObject:nil forKey:k_access_token];
     [setting synchronize];
@@ -65,6 +69,7 @@ static Manager* instance = nil;
     }
     userid = [setting objectForKey:k_id];
     username = [setting objectForKey:k_username];
+    password = [setting objectForKey:k_password];
     email = [setting objectForKey:k_email];
     access_token = [setting objectForKey:k_access_token];
     return  YES;

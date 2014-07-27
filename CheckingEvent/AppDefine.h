@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Appcoda. All rights reserved.
 //
 
+//app ads
+#define admob_id @"a153c410ccaf09d"
+
+
 //app message
 #define msg_connection_error @"Connection error"
 #define msg_confirm @"Are you sure you want to log out?"
@@ -25,6 +29,7 @@
 //login json key
 #define k_id @"id"
 #define k_username @"username"
+#define k_password @"password"
 #define k_email @"email"
 #define k_access_token @"access_token"
 #define k_login @"login"
